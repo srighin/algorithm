@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventsRequest
+        xmlns:ns7="urn:expedia:e3:data:placetypes:defn:v4"
+        xmlns:ptypes="urn:expedia:e3:data:persontypes:defn:v4"
+        xmlns:ltypes="urn:expedia:e3:ss:lodging:lodginginterface:commontypes:defn:v4"
+        xmlns:data="urn:expedia:om:datatype:defn:v1"
+        xmlns:lbc="urn:expedia:e3:ss:lodging:lodginginterface:bookingcommontypes:defn:v2"
+        xmlns:common="urn:expedia:om:common:defn:v1"
+        xmlns:event="urn:expedia:om:order:event:messages:v1"
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <MessageInfo MessageGUID="d7f6922e-3d37-4ab5-bbef-f5a9a1681b7e"/>
+    <EventList>
+        <Event>
+            <EventId>1710597791</EventId>
+            <EventType>1</EventType>
+            <ClientId>TX-BRIDGE</ClientId>
+            <OrderSiteInfo>
+                <TPID>28</TPID>
+                <EAPID>0</EAPID>
+                <LanguageId>1041</LanguageId>
+                <LanguageCode>en</LanguageCode>
+                <CountryAlpha2Code>US</CountryAlpha2Code>
+                <PointOfSaleOrderReferenceNumber>791390806190</PointOfSaleOrderReferenceNumber>
+            </OrderSiteInfo>
+            <OrderComponentsType>
+                <Hotel>false</Hotel>
+                <Air>true</Air>
+                <Car>false</Car>
+                <DestinationServices>false</DestinationServices>
+                <Bus>false</Bus>
+                <Train>false</Train>
+                <Insurance>false</Insurance>
+                <Cruise>false</Cruise>
+            </OrderComponentsType>
+            <AdditionalDataList>
+                <ItineraryNumber>0</ItineraryNumber>
+            </AdditionalDataList>
+            <ExpediaUser>
+                <UserID>351571</UserID>
+                <SiteKey>28</SiteKey>
+                <ExpUserID>1933647</ExpUserID>
+                <PhoneCountryCode>91</PhoneCountryCode>
+                <PhoneAreaCode>906</PhoneAreaCode>
+                <PhoneNumber>0551337</PhoneNumber>
+            </ExpediaUser>
+            <OrderStatus>Booked</OrderStatus>
+            <OrderLines/>
+        </Event>
+    </EventList>
+</EventsRequest>

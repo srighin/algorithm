@@ -1,0 +1,78 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EventsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MessageInfo">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute type="xs:string" name="MessageGUID"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EventList">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Event">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:int" name="EventId"/>
+                                        <xs:element type="xs:byte" name="EventType"/>
+                                        <xs:element name="OrderSiteInfo">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:byte" name="TPID"/>
+                                                    <xs:element type="xs:byte" name="EAPID"/>
+                                                    <xs:element type="xs:short" name="LanguageId"/>
+                                                    <xs:element type="xs:string" name="LanguageCode"/>
+                                                    <xs:element type="xs:string" name="CountryAlpha2Code"/>
+                                                    <xs:element type="xs:long" name="PointOfSaleOrderReferenceNumber"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="OrderComponentsType">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="Hotel"/>
+                                                    <xs:element type="xs:string" name="Air"/>
+                                                    <xs:element type="xs:string" name="Car"/>
+                                                    <xs:element type="xs:string" name="DestinationServices"/>
+                                                    <xs:element type="xs:string" name="Bus"/>
+                                                    <xs:element type="xs:string" name="Train"/>
+                                                    <xs:element type="xs:string" name="Insurance"/>
+                                                    <xs:element type="xs:string" name="Cruise"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="AdditionalDataList">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:byte" name="ItineraryNumber"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ExpediaUser">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:int" name="UserID"/>
+                                                    <xs:element type="xs:byte" name="SiteKey"/>
+                                                    <xs:element type="xs:int" name="ExpUserID"/>
+                                                    <xs:element type="xs:byte" name="PhoneCountryCode"/>
+                                                    <xs:element type="xs:short" name="PhoneAreaCode"/>
+                                                    <xs:element type="xs:int" name="PhoneNumber"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="OrderStatus"/>
+                                        <xs:element type="xs:string" name="OrderLines"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

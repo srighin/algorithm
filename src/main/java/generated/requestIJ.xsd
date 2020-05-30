@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EventsRequest" type="EventsRequestType"/>
+  <xs:complexType name="MessageInfoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="MessageGUID"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="OrderSiteInfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="TPID"/>
+      <xs:element type="xs:string" name="EAPID"/>
+      <xs:element type="xs:string" name="LanguageId"/>
+      <xs:element type="xs:string" name="LanguageCode"/>
+      <xs:element type="xs:string" name="CountryAlpha2Code"/>
+      <xs:element type="xs:string" name="PointOfSaleOrderReferenceNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrderComponentsTypeType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Hotel"/>
+      <xs:element type="xs:string" name="Air"/>
+      <xs:element type="xs:string" name="Car"/>
+      <xs:element type="xs:string" name="DestinationServices"/>
+      <xs:element type="xs:string" name="Bus"/>
+      <xs:element type="xs:string" name="Train"/>
+      <xs:element type="xs:string" name="Insurance"/>
+      <xs:element type="xs:string" name="Cruise"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdditionalDataListType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="ItineraryNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExpediaUserType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="UserID"/>
+      <xs:element type="xs:string" name="SiteKey"/>
+      <xs:element type="xs:string" name="ExpUserID"/>
+      <xs:element type="xs:string" name="PhoneCountryCode"/>
+      <xs:element type="xs:string" name="PhoneAreaCode"/>
+      <xs:element type="xs:string" name="PhoneNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="EventId"/>
+      <xs:element type="xs:string" name="EventType"/>
+      <xs:element type="xs:string" name="ClientId" default="TX-BRIDGE"/>
+      <xs:element type="OrderSiteInfoType" name="OrderSiteInfo"/>
+      <xs:element type="OrderComponentsTypeType" name="OrderComponentsType"/>
+      <xs:element type="AdditionalDataListType" name="AdditionalDataList"/>
+      <xs:element type="ExpediaUserType" name="ExpediaUser"/>
+      <xs:element type="xs:string" name="OrderStatus"/>
+      <xs:element type="xs:string" name="OrderLines"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventListType">
+    <xs:sequence>
+      <xs:element type="EventType" name="Event"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventsRequestType">
+    <xs:sequence>
+      <xs:element type="MessageInfoType" name="MessageInfo"/>
+      <xs:element type="EventListType" name="EventList"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

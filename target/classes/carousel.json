@@ -1,0 +1,69 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            "position": "relative",
+            "align": "center",
+            "gravity": "top",
+            "size": "full",
+            "margin": "none",
+            "aspectMode": "cover",
+            "aspectRatio": "5:3"
+          },
+          {
+            "type": "text",
+            "text": "Flight Protection",
+            "margin": "none",
+            "size": "lg",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "hello, world"
+          },
+          {
+            "type": "separator",
+            "margin": "xl"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "See Itinerary",
+              "uri": "http://linecorp.com/"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Select Booking",
+              "uri": "http://linecorp.com/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "hello, world"
+          }
+        ]
+      }
+    }
+  ]
+}

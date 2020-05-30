@@ -1,0 +1,334 @@
+{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "direction": "ltr",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "margin": "sm",
+      "contents": [
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "text",
+          "text": "Your upcoming flight to Tokyo saves you up to 50% off* selected hotels. Here are some options for you on [check-in date].",
+          "size": "sm",
+          "align": "start",
+          "color": "#6B6F79",
+          "wrap": true
+        },
+        {
+          "type": "text",
+          "text": "*Terms & Condition apply",
+          "margin": "md",
+          "size": "xs",
+          "align": "start",
+          "color": "#005AEB"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "margin": "none",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "none",
+          "margin": "none",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Mediterraneo Park Hotel Park Hotel ",
+              "margin": "none",
+              "size": "sm",
+              "weight": "bold",
+              "color": "#001959",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "margin": "md",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "vertical",
+              "flex": 0,
+              "contents": [
+                {
+                  "type": "image",
+                  "url": "https://developers.line.me/assets/images/services/bot-designer-icon.png",
+                  "flex": 0,
+                  "align": "start",
+                  "size": "md",
+                  "aspectRatio": "1.51:1",
+                  "backgroundColor": "#D9D4D4"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "filler"
+                },
+                {
+                  "type": "text",
+                  "text": "30% off ",
+                  "size": "xs",
+                  "align": "end",
+                  "color": "#017964",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "Original price ¥XXXXXXXXX",
+                  "size": "xs",
+                  "align": "end",
+                  "color": "#787FA1",
+                  "wrap": true
+                },
+                {
+                  "type": "text",
+                  "text": "¥ 7,000",
+                  "size": "lg",
+                  "align": "end",
+                  "weight": "bold",
+                  "color": "#005AEB"
+                },
+                {
+                  "type": "text",
+                  "text": "Per night for 2 guest",
+                  "size": "xs",
+                  "align": "end",
+                  "color": "#787FA1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "separator",
+          "margin": "lg",
+          "color": "#D8D6D6"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "margin": "md",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Mediterraneo Park Hotel Park Hotel ",
+              "size": "sm",
+              "weight": "bold",
+              "color": "#001959",
+              "wrap": true
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "margin": "lg",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "flex": 0,
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://developers.line.me/assets/images/services/bot-designer-icon.png",
+                      "flex": 0,
+                      "align": "start",
+                      "aspectRatio": "1.51:1",
+                      "backgroundColor": "#D8D2D2"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "text",
+                      "text": "30% off ",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#017964",
+                      "wrap": true
+                    },
+                    {
+                      "type": "text",
+                      "text": "Original price ¥XXXXXX",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#787FA1",
+                      "wrap": true
+                    },
+                    {
+                      "type": "text",
+                      "text": "¥ 7,000",
+                      "size": "lg",
+                      "align": "end",
+                      "weight": "bold",
+                      "color": "#005AEB"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Per night for 2 guest",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#787FA1",
+                      "wrap": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "separator",
+          "margin": "lg"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "margin": "md",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Mediterraneo Park Hotel Park Hotel ",
+                  "size": "sm",
+                  "weight": "bold",
+                  "color": "#001959",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "margin": "lg",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://developers.line.me/assets/images/services/bot-designer-icon.png",
+                      "margin": "none",
+                      "align": "start",
+                      "aspectRatio": "1.51:1",
+                      "backgroundColor": "#D9D6D6"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "flex": 0,
+                  "margin": "none",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "text",
+                      "text": "30% off ",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#017964",
+                      "wrap": true
+                    },
+                    {
+                      "type": "text",
+                      "text": "Original price ¥XXXXXX",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#787FA1"
+                    },
+                    {
+                      "type": "text",
+                      "text": "¥ 7,000",
+                      "size": "lg",
+                      "align": "end",
+                      "weight": "bold",
+                      "color": "#005AEB"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Per night for 2 guest",
+                      "size": "xs",
+                      "align": "end",
+                      "color": "#6B7499"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "separator",
+              "margin": "lg"
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "margin": "md",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Excluding taxes and fees.",
+                  "margin": "sm",
+                  "size": "xs",
+                  "align": "center",
+                  "color": "#6B6F79",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "none",
+      "margin": "none",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "See more",
+            "uri": "https://linecorp.com"
+          },
+          "color": "#005AEB"
+        }
+      ]
+    },
+    "styles": {
+      "body": {
+        "backgroundColor": "#F6F6F6"
+      }
+    }
+  }
+}
