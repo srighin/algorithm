@@ -76,7 +76,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T>{
         while(currentNode != null){
             if(currentNode.getData().compareTo(data) == 0){
                 previousNode.setNextNode(currentNode.getNextNode());
-                currentNode = null;
+                size --;
                 return;
             } else {
                 previousNode = currentNode;
@@ -91,10 +91,10 @@ public class LinkedList<T extends Comparable<T>> implements List<T>{
             return;
         }
 
-        Node<T> actualNode = this.root;
-        while(actualNode != null){
-            System.out.print(actualNode.getData()+" - ");
-            actualNode = actualNode.getNextNode();
+        Node<T> currentNode = this.root;
+        while(currentNode != null){
+            System.out.print(currentNode.getData()+" - ");
+            currentNode = currentNode.getNextNode();
         }
     }
 

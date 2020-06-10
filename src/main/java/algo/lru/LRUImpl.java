@@ -3,7 +3,7 @@ package algo.lru;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LRUImpl<T> {
+public class LRUImpl<T extends Comparable<T>> {
 
     private int actualSize;
     private DoublyLinkedList list;
@@ -40,8 +40,6 @@ public class LRUImpl<T> {
         Node<Node> previousNode = tail.getPreviousNode();
         previousNode.setNextNode(null);
         list.setTail(previousNode);
-
-        tail = null;
     }
 
     public Node<T> get(int id){

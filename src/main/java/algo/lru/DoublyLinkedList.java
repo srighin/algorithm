@@ -1,23 +1,23 @@
 package algo.lru;
 
-public class DoublyLinkedList {
+public class DoublyLinkedList<T> {
 
-    private Node head;
-    private Node tail;
+    private Node<T> head;
+    private Node<T> tail;
 
-    public Node getHead() {
+    public Node<T> getHead() {
         return head;
     }
 
-    public void setHead(Node head) {
+    public void setHead(Node<T> head) {
         this.head = head;
     }
 
-    public Node getTail() {
+    public Node<T> getTail() {
         return tail;
     }
 
-    public void setTail(Node tail) {
+    public void setTail(Node<T> tail) {
         this.tail = tail;
     }
 }
