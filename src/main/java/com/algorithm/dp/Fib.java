@@ -8,7 +8,7 @@ public class Fib {
     public static Map<Long, Long> cache = new HashMap<>();
 
     public static void main(String[] args) {
-        System.out.println(findFibonacciUsingMomoization(4));
+        System.out.println(findFibonacciUsingMemoization(6));
     }
 
     /**
@@ -16,14 +16,14 @@ public class Fib {
      * @param number
      * @return
      */
-    public static Long findFibonacciUsingMomoization(long number) {
+    public static Long findFibonacciUsingMemoization(long number) {
         Long result ;
         if (number == 1 || number == 2) {
             cache.put(number, 1l);
             return 1l;
         }
         if (cache.get(number) == null){
-            result = findFibonacciUsingMomoization(number - 1) + findFibonacciUsingMomoization(number - 2);
+            result = findFibonacciUsingMemoization(number - 1) + findFibonacciUsingMemoization(number - 2);
             cache.put(number, result);
             return result;
         } else {

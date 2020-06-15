@@ -44,6 +44,10 @@ public class LinkedList<T extends Comparable<T>> implements List<T>{
 
     }
 
+    public Node<T> getRoot() {
+        return root;
+    }
+
     @Override
     public void reverse() {
 
