@@ -10,6 +10,27 @@ public class FindPeakElement {
     }
 
     private static int findPeakElement(int[] numbers) {
+        if (numbers == null || numbers.length==0){
+            return 0;
+        }
+
+        int left = 0;
+        int right = numbers.length - 1;
+
+        while(left < right){
+            int mid = left + (right-left)/2;
+            if(numbers[mid] < numbers[mid+1]){
+                left = mid+1;
+            }else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+
+
+    /*private static int findPeakElement(int[] numbers) {
         int startIndex = 0;
         int endIndex = numbers.length - 1;
 
@@ -23,5 +44,5 @@ public class FindPeakElement {
             }
         }
         return startIndex;
-    }
+    }*/
 }

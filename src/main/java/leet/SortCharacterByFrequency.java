@@ -14,6 +14,24 @@ public class SortCharacterByFrequency {
     }
 
     private String frequencySort(String str) {
+        Map<Character, Integer> map = new HashMap<>();
+        for(char ch : str.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0)+1);
+        }
+
+        PriorityQueue<Character> maxHeap = new PriorityQueue((a, b) -> map.get(b) - map.get(a));
+        maxHeap.addAll(map.keySet());
+        StringBuilder result =  new StringBuilder();
+        while(!maxHeap.isEmpty()){
+            Character element = maxHeap.remove();
+            for (int i =0; i < map.get(element); i++){
+                result.append(element);
+            }
+        }
+        return  result.toString();
+    }
+
+   /* private String frequencySort(String str) {
         StringBuilder result = new StringBuilder();
         Map<Character, Integer> hashTable = new HashMap<>();
         for (char ch : str.toCharArray()){
@@ -29,5 +47,5 @@ public class SortCharacterByFrequency {
             }
         }
         return result.toString();
-    }
+    }*/
 }
