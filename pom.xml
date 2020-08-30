@@ -47,34 +47,7 @@
       <version>2.3.26-incubating</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.expedia.gco.seva.commons</groupId>
-      <artifactId>gco-seva-domain-model</artifactId>
-      <version>6.1.5</version>
-    </dependency>
 
-    <dependency>
-      <groupId>com.expedia</groupId>
-      <artifactId>seva-va-commons</artifactId>
-      <version>1.2.55</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.expedia.mozart.aop</groupId>
-          <artifactId>mozart-aop</artifactId>
-        </exclusion>
-        <exclusion>
-          <artifactId>seva-conversation-proxy</artifactId>
-          <groupId>com.expedia</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-
-    <dependency>
-      <groupId>com.expedia</groupId>
-      <artifactId>ccp-va-decision-core</artifactId>
-      <version>16.3.42</version>
-    </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
     <dependency>
