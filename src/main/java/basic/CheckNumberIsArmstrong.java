@@ -2,7 +2,7 @@ package basic;
 
 public class CheckNumberIsArmstrong {
     public static void main(String[] args) {
-        int number = 153;
+        int number = 370;
 
         int sum = 0;
         int temp = number;

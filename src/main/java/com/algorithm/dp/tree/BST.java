@@ -16,12 +16,6 @@ public class BST<T extends Comparable> {
 
         if (root == null){
 
-        }else{
-            if (data.compareTo(root.getNode()) <= 0){
-                insertData(data, root.getLeftNode());
-            } else if(data.compareTo(root.getNode())> 0){
-                insertData(data, root.getRighttNode());
-            }
         }
     }
 }

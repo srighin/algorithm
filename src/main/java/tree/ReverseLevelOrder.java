@@ -31,6 +31,7 @@ class TreeNode{
     private int data;
     private TreeNode left;
     private TreeNode right;
+    private int height;
 
     public TreeNode(int data) {
         this.data = data;
@@ -75,6 +76,14 @@ class TreeNode{
 
     public void setRight(TreeNode right) {
         this.right = right;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
