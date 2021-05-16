@@ -1,10 +1,15 @@
 package array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FindFirstMissingNumberInArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 5, -1, -2, -5};
         int missingNumber = findFirstMissingNumber(array);
         System.out.println("Missing Number:: " + missingNumber);
+        Map<Integer, Integer> lookup = new HashMap<>();
+        lookup.put(12, lookup.getOrDefault(12, 0)+1);
     }
 
     private static int findFirstMissingNumber(int[] array) {

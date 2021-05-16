@@ -35,4 +35,26 @@ public class TreeUtil {
 
         return root;
     }
+
+    public static TreeNode create3(){
+        TreeNode root = new TreeNode(2);
+        TreeNode left = new TreeNode(7);
+        TreeNode right = new TreeNode(5);
+
+        root.setLeft(left);
+        root.setRight(right);
+
+        TreeNode leftLeft = new TreeNode(12);
+        TreeNode leftRight = new TreeNode(6);
+        left.setLeft(leftLeft);
+        left.setRight(leftRight);
+
+        TreeNode leftLeftLeft = new TreeNode(1);
+        leftLeft.setLeft(leftLeftLeft);
+
+        TreeNode leftLeftLeftLeft = new TreeNode(10);
+        leftLeftLeft.setLeft(leftLeftLeftLeft);
+
+        return root;
+    }
 }

@@ -23,6 +23,8 @@ public class App {
         InOrderTraversal inOrderTraversal = new InOrderTraversal();
         System.out.println("In order traversal");
         inOrderTraversal.inOrderTraversal(root);
+
+        inOrderTraversal.inOrderTraversalWithoutRecursion(root);
         System.out.println();
         System.out.print("Pre order traversal");
 

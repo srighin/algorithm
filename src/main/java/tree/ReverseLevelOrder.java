@@ -2,6 +2,8 @@ package tree;
 
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 
 public class ReverseLevelOrder {
@@ -32,6 +34,10 @@ class TreeNode{
     private TreeNode left;
     private TreeNode right;
     private int height;
+    public TreeNode next;
+    public TreeNode prev;
+
+
 
     public TreeNode(int data) {
         this.data = data;
@@ -84,6 +90,37 @@ class TreeNode{
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public static void levelOrderTraversal(TreeNode root) {
+        if(root == null){
+            return;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (true){
+            int size = queue.size();
+
+            if(size == 0){
+                break;
+            }
+
+            while(size > 0){
+                TreeNode currentNode = queue.poll();
+                System.out.print(currentNode.getData()+" ->");
+                if(currentNode.getLeft() != null){
+                    queue.add(currentNode.getLeft());
+                }
+
+                if(currentNode.getRight() != null){
+                    queue.add(currentNode.getRight());
+                }
+                size--;
+            }
+            System.out.println();
+        }
     }
 
     @Override

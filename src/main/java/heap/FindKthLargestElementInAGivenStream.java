@@ -1,31 +1,65 @@
 package heap;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class FindKthLargestElementInAGivenStream {
 
-    private static PriorityQueue<Integer> queue;
 
     public static void main(String[] args) {
-        queue = new PriorityQueue<>();
         int[] numbers = {10, 7, 11, 5, 27, 9, 8, 45};
+
         int kth = 3;
-        for (int num : numbers) {
-            System.out.println(findKthLargestElement(num, kth));
+        int kthLargestNumberInArray = findKthLargestElement(numbers, kth);
+        System.out.println("Largest:: "+kthLargestNumberInArray);
+
+        System.out.println("---------------------------------");
+
+        int kthSmallestElement = findKthSmallestElement(numbers, kth);
+        System.out.println("Smallest:: "+kthSmallestElement);
+
+        Arrays.sort(numbers);
+        for(int num: numbers){
+            System.out.print(num+" -> ");
         }
     }
 
-    private static int findKthLargestElement(int num, int kth) {
-        if (queue.size() < kth) {
-            queue.add(num);
-            return queue.size() == kth ? queue.peek() : -1;
+    private static int findKthSmallestElement(int[] numbers, int kth) {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        int index = 0;
+        while (index < kth){
+            maxHeap.add(numbers[index]);
+            index++;
         }
 
-        if (num > queue.peek()) {
-            queue.poll();
-            queue.add(num);
+        while (index< numbers.length){
+            if(numbers[index] < maxHeap.peek()){
+                maxHeap.poll();
+                maxHeap.add(numbers[index]);
+            }
+            index++;
         }
-
-        return queue.peek();
+        return maxHeap.peek();
     }
+
+    private static int findKthLargestElement(int[] numbers, int kth) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        int index = 0;
+        while (index < kth){
+            minHeap.add(numbers[index]);
+            index++;
+        }
+
+        while (index< numbers.length){
+            if(numbers[index] > minHeap.peek()){
+                minHeap.poll();
+                minHeap.add(numbers[index]);
+            }
+            index++;
+        }
+        return minHeap.peek();
+    }
+
+
 }
