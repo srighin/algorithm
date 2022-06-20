@@ -45,12 +45,12 @@ public class FindCycleInArray {
 
     private static int getNextPointer(int[] array, int index, boolean currentDirection) {
         boolean nextDirection = array[index] > 0;
-        if(currentDirection != nextDirection){
+        if(nextDirection != currentDirection){
             return -1;
         }
-        int nextIndex = (index + array[index])% array.length;
 
-        if(nextIndex <0){
+        int nextIndex = (index + array[index]) % array.length;
+        if(nextIndex < 0){
             nextIndex = nextIndex+ array.length;
         }
 
@@ -60,4 +60,6 @@ public class FindCycleInArray {
 
         return nextIndex;
     }
+
+
 }

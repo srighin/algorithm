@@ -1,13 +1,11 @@
 package array;
 
-import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
-
 import java.util.*;
 
 public class FindSubArrayOfGivenSum {
     public static void main(String[] args) {
         int [] array = {4, 2, 5, 3, 1 ,8};
-        int targetSum = 8;
+        int targetSum = 9;
         List<Integer> indexes = findIndexWithGivenSum(array, targetSum);
         indexes.stream().forEach(num -> System.out.print(num+" -> "));
 
@@ -32,6 +30,7 @@ public class FindSubArrayOfGivenSum {
             if(lookup.containsKey(diff)){
                 return Arrays.asList(startIndex+1, endIndex);
             }
+            System.out.println("Diff: "+diff+ " : Start Index: "+startIndex+" : endIndex: "+endIndex);
             lookup.put(diff, endIndex++);
         }
         return new ArrayList<>();

@@ -16,16 +16,16 @@ public class FindFirstRepeatingElement {
         }
 
         Set<Integer> lookup = new HashSet<>();
-        for(int num: array){
-            lookup.add(num);
-        }
-        int index = array.length-1;
-        int firstOccurrence = array[index];
-        while (--index >= 0){
-            if(lookup.contains(array[index])){
-                firstOccurrence = array[index];
-            }
-        }
-        return firstOccurrence;
+       int firstRepeating = -1;
+
+       for(int index = array.length-1; index >= 0; index--){
+           if(lookup.contains(array[index])){
+               firstRepeating = array[index];
+           }else {
+               lookup.add(array[index]);
+           }
+       }
+
+       return firstRepeating;
     }
 }

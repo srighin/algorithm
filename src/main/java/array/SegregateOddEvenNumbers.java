@@ -19,16 +19,16 @@ public class SegregateOddEvenNumbers {
         int startIndex = 0;
         int endIndex = numbers.length -1;
 
-        while (startIndex < endIndex){
-            while (startIndex < endIndex && numbers[startIndex] % 2 == 0){
+        while (startIndex <= endIndex){
+            while (startIndex <= endIndex && numbers[startIndex] % 2 == 0){
                 startIndex ++;
             }
 
-            while (startIndex < endIndex && numbers[endIndex] %2 != 0){
+            while (startIndex <= endIndex && numbers[endIndex] %2 != 0){
                 endIndex--;
             }
 
-            if(startIndex < endIndex ){
+            if(startIndex <= endIndex ){
                 int temp = numbers[startIndex];
                 numbers[startIndex] = numbers[endIndex];
                 numbers[endIndex] = temp;

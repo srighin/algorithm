@@ -8,7 +8,7 @@ public class ANumberIsPalindrome {
         int temp = number;
 
         while (temp > 0){
-            sum= sum*10 + temp % 10;
+            sum = sum*10 + temp % 10;
             temp=temp/10;
         }
 

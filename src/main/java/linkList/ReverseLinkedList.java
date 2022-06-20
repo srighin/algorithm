@@ -12,8 +12,10 @@ public class ReverseLinkedList {
 
         linkList.print();
 
-        Node reverseInGroup = reverseInGroup(linkList.getHead(), 3);
-        linkList.print(reverseInGroup);
+        Node reverse = linkList.reverse(linkList.getHead());
+
+        //Node reverseInGroup = reverseInGroup(linkList.getHead(), 3);
+        linkList.print(reverse);
     }
 
     public static Node reverseInGroup(Node node, int k) {

@@ -6,7 +6,7 @@ import java.util.List;
 public class FindCorruptPair {
 
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 4, 5, 5};
+        int[] numbers = {5, 2, 4, 1, 5};
         List<Integer> corruptPair = findCorruptPair(numbers);
         corruptPair.forEach(num -> System.out.println(num));
     }

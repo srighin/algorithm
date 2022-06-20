@@ -14,7 +14,7 @@ public class SortArrayWithNumFrom1ToN {
                 int temp = array[startIndex];
                 array[startIndex] = array[otherIndex];
                 array[otherIndex] = temp;
-            }else {
+            } else {
                 startIndex++;
             }
         }

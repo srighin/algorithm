@@ -15,7 +15,7 @@ public class RemoveAllDuplicateElementFromSortedList {
         list1.print();
         list1.sortList(list1.getHead());
         list1.print();
-       // list1.removeDuplicate(list1.getHead());
+        list1.removeDuplicate();
         list1.print();
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 public class FindAllDuplicateAndMissingNumbers {
 
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 3, 5, 5};
+        int[] numbers = {5, 2, 3, 3, 1, 5};
         List<List<Integer>> missingAndDuplicate = findMissingAndDuplicate(numbers);
         for (List<Integer> list : missingAndDuplicate) {
             System.out.print(list);
@@ -23,15 +23,15 @@ public class FindAllDuplicateAndMissingNumbers {
         }
 
         int index = 0;
-
-        while (index < numbers.length) {
-            if (numbers[index] != index + 1) {
-                int otherIndex = numbers[numbers[index] - 1];
+        while (index < numbers.length - 1) {
+            if (numbers[index] != numbers[numbers[index] - 1]) {
+                int otherIndex = numbers[index] - 1;
                 int temp = numbers[otherIndex];
                 numbers[otherIndex] = numbers[index];
                 numbers[index] = temp;
+            } else {
+                index++;
             }
-            index++;
         }
 
         for (int i = 0; i < numbers.length; i++) {

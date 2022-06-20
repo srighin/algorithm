@@ -24,8 +24,8 @@ public class GetUnionOfTwoLinkedList {
 
         list2.print();
 
-        /*System.out.println("!!!!!!!  UNION !!!!!!!");
-        list1.findUnion(list2);*/
+        System.out.println("!!!!!!!  UNION !!!!!!!");
+        list1.findUnion(list2);
         System.out.println("!!!!!!!  INTERSECTION !!!!!!!");
         list1.intersection(list2.getHead());
 

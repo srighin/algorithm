@@ -2,7 +2,7 @@ package array;
 
 public class CyclicSort {
     public static void main(String[] args) {
-        int [] array = {5, 3, 2, 4, 1};
+        int [] array = {5, 2, 3, 3, 1, 5};
         sortCyclic(array);
         for (int num: array){
             System.out.print(num+" ->");
@@ -10,11 +10,11 @@ public class CyclicSort {
     }
 
     private static void sortCyclic(int[] array) {
-        if(array ==  null || array.length ==0){
+        if(array == null || array.length==0){
             return;
         }
 
-        for(int index = 0; index< array.length; index++){
+        for(int index=0; index< array.length; index++){
             if(index != array[index]-1){
                 int otherIndex = array[index]-1;
 
